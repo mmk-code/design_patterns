@@ -20,4 +20,13 @@ export abstract class Duck {
     }
 
     abstract displayDuck(): void;
+
+    // Assign the Behaviors dynamically
+    setQuackBehavior(qb: IQuackBehavior): void {
+        this.quackBehavior = qb;
+    }
+
+    setFlyBehavior(fb: IFlyBehavior): void {
+        this.flyBehavior = fb;
+    }
 }

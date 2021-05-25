@@ -16,3 +16,9 @@ export class FlyNoWay implements IFlyBehavior {
     }
 }
 
+export class FlyRocketPowered implements IFlyBehavior {
+    fly(): void {
+        printLine("I'm flying with Rocket!");
+    }
+
+}
