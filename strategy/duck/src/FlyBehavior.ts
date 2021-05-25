@@ -1,15 +1,18 @@
+import { printLine } from "./util";
+
 export interface IFlyBehavior {
-    fly(): string;
+    fly(): void;
 }
 
-class FlyWithWings implements IFlyBehavior {
-    fly(): string {
-        return "Fly with Wings";
+export class FlyWithWings implements IFlyBehavior {
+    fly(): void {
+        printLine("Fly with Wings") ;
     }
 }
 
-class FlyNoWay implements IFlyBehavior {
-    fly(): string {
-        return "Don't fly";
+export class FlyNoWay implements IFlyBehavior {
+    fly(): void {
+        printLine("Don't fly");
     }
 }
+

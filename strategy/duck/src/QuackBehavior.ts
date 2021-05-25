@@ -1,21 +1,23 @@
+import { printLine } from "./util";
+
 export interface IQuackBehavior {
-    quack(): string;
+    quack(): void;
 }
 
-class Quack implements IQuackBehavior {
-    quack(): string {
-        return "Real Duck Sound ";
+export class Quack implements IQuackBehavior {
+    quack(): void {
+        printLine("Real Duck Sound");
     }
 }
 
-class Squeak implements IQuackBehavior {
-    quack(): string {
-        return "Squeak sound ";
+export class Squeak implements IQuackBehavior {
+    quack(): void {
+        printLine("Squeak sound");
     }
 }
 
-class MuteQuack implements IQuackBehavior {
-    quack(): string {
-        return "No sound ";
+export class MuteQuack implements IQuackBehavior {
+    quack(): void {
+        printLine("No sound");
     }
 }
